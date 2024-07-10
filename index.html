@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
+    <title>Image Viewer</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        iframe {
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .row {
+            display: flex;
+            flex-grow: 1;
+        }
+        .row img {
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <iframe src="МЕНЮ.pdf" type="application/pdf"></iframe>
+    <div class="container">
+        <div class="row">
+            <img src="menu1.png" alt="Image 1">
+            <img src="menu2.png" alt="Image 2">
+        </div>
+        <div class="row">
+            <img src="menu3.png" alt="Image 3">
+            <img src="menu4.png" alt="Image 4">
+        </div>
+    </div>
 </body>
 </html>
